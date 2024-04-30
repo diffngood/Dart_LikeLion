@@ -55,6 +55,10 @@ void main(){
 
   t200.val1 = -1000;
   print("t200.val1 : ${t200.val1}");
+
+  var t500 = TestClass500(100, 200);
+  print("t500.memberA : ${t500.memberA}");
+  print("t500.memberB : ${t500.memberB}");
 }
 
 // 클래스
@@ -115,4 +119,16 @@ class TestClass4{
     print("_member_a2 : $_member_a2");
   }
 
+}
+
+class TestClass500{
+  late int memberA;
+  late int memberB;
+  /*
+  TestClass5(memberA, memberB){
+    this.memberA = memberA;
+    this.memberB = memberB;
+  }
+  */
+  TestClass500(this.memberA, this.memberB);
 }
